@@ -1,4 +1,4 @@
-from task1 import find_numbers, replace_numbers_as_texts
+from task1 import find_numbers, numbers_as_texts, replace_numbers_as_texts
 
 
 def test_find_numbers():
@@ -23,32 +23,10 @@ zoneight234
 
 def test_replace_numbers_as_texts():
     line = "two1nine"
-    numbers_as_texts = {
-        "one": 1,
-        "two": 2,
-        "three": 3,
-        "four": 4,
-        "five": 5,
-        "six": 6,
-        "seven": 7,
-        "eight": 8,
-        "nine": 9
-    }
     line = replace_numbers_as_texts(line, numbers_as_texts)
     assert line == "219"
 
 def test_replace_numbers_as_texts_with_lower_wrong_number():
     line = "eightwothree"
-    numbers_as_texts = {
-        "one": 1,
-        "two": 2,
-        "three": 3,
-        "four": 4,
-        "five": 5,
-        "six": 6,
-        "seven": 7,
-        "eight": 8,
-        "nine": 9
-    }
     line = replace_numbers_as_texts(line, numbers_as_texts)
     assert line == "8wo3"
