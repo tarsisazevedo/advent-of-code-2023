@@ -1,14 +1,14 @@
 numbers_as_texts = {
-    "one": 1,
-    "two": 2,
-    "three": 3,
-    "four": 4,
-    "five": 5,
-    "six": 6,
-    "seven": 7,
-    "eight": 8,
-    "nine": 9,
-    "zero": 0
+    "one": "on1e",
+    "two": "tw2o",
+    "three": "th3ree",
+    "four": "fo4ur",
+    "five": "fi5ve",
+    "six": "si6x",
+    "seven": "se7ven",
+    "eight": "ei8ght",
+    "nine": "ni9ne",
+    "zero": "ze0ro",
 }
 
 def replace_numbers_as_texts(line, numbers_as_texts):

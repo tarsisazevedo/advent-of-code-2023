@@ -24,9 +24,9 @@ zoneight234
 def test_replace_numbers_as_texts():
     line = "two1nine"
     line = replace_numbers_as_texts(line, numbers_as_texts)
-    assert line == "219"
+    assert line == "tw2o1ni9ne"
 
 def test_replace_numbers_as_texts_with_lower_wrong_number():
     line = "eightwothree"
     line = replace_numbers_as_texts(line, numbers_as_texts)
-    assert line == "8wo3"
+    assert line == "ei8ghtw2oth3ree"
