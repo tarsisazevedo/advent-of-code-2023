@@ -19,14 +19,18 @@ def replace_numbers_as_texts(line, numbers_as_texts):
                 return replace_numbers_as_texts(line, numbers_as_texts)
     return line
 
+def extract_numbers(line):
+    line_numbers  = ""
+    line = replace_numbers_as_texts(line, numbers_as_texts)
+    for char in line:
+        if char.isdigit():
+            line_numbers += char
+    return line_numbers
+    
 def find_numbers(input):
     numbers = []
     for line in input.splitlines():
-        line_numbers  = ""
-        line = replace_numbers_as_texts(line, numbers_as_texts)
-        for char in line:
-            if char.isdigit():
-                line_numbers += char
+        line_numbers = extract_numbers(line)
         if line_numbers:
             number = int(line_numbers[0]+line_numbers[-1]) 
             numbers.append(number)

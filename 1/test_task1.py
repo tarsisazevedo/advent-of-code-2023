@@ -1,4 +1,5 @@
-from task1 import find_numbers, numbers_as_texts, replace_numbers_as_texts
+from task1 import (extract_numbers, find_numbers, numbers_as_texts,
+                   replace_numbers_as_texts)
 
 
 def test_find_numbers():
@@ -30,3 +31,8 @@ def test_replace_numbers_as_texts_with_lower_wrong_number():
     line = "eightwothree"
     line = replace_numbers_as_texts(line, numbers_as_texts)
     assert line == "ei8ghtw2oth3ree"
+
+def test_extract_correct_numbers():
+    line = "eightwothree"
+    line = extract_numbers(line)
+    assert line == "823"
